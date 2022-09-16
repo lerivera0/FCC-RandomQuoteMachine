@@ -1,0 +1,195 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ring-container {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(38, 38, 38, 0.7);
+  z-index: 9999;
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  border: 3px solid #3c3c3c;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 200px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #fff000;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #fff000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.ring:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid #fff000;
+  border-right: 3px solid #fff000;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+.ring span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+.ring span:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff000;
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px #fff000;
+}
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+.bar {
+  padding: 10px;
+  margin: 10px;
+  color: #333;
+  background: #fafafa;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.error {
+  color: #ba3939;
+  background: #ffe0e0;
+  border: 1px solid #a33a3a;
+}
+
+#new-quote {
+  cursor: pointer;
+  float: left;
+  fill: brown;
+  stroke: rgb(92, 16, 16);
+  background-color: transparent;
+  border: none;
+  margin: 0 10px;
+}
+
+
+#quote-box {
+  margin: auto;
+  width: 450px;
+  border: 3px solid brown;
+  padding: 0;
+}
+
+.container {
+  overflow: hidden;
+  clear: both;
+}
+
+.open-quote {
+  height: 25px;
+  width: 25px;
+  fill: brown;
+  stroke: rgb(92, 16, 16);
+}
+
+.close-quote {
+  height: 25px;
+  width: 25px;
+  fill: brown;
+  stroke: rgb(92, 16, 16);
+  float: right;
+}
+
+#text {
+  margin: 0 20px;
+}
+
+#author {
+  margin: 30px 0;
+  float: right;
+}
+
+#tweet-quote {
+  fill: brown;
+  stroke: rgb(92, 16, 16);
+  float: right;
+  margin: 0 10px;
+}
+
+#tweet-quote:hover {
+  fill: rgb(196, 79, 79);
+}
+
